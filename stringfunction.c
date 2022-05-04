@@ -89,15 +89,23 @@ int main(){
     }
     
     else if (x==8){
+        sprintf_str_function()
+        char data_string;
+        char friend_name[200]="Parthajeet Sharma";
+        int age;
+        printf("Enter the age of %s:\t",friend_name);
+        scanf("%d",&age);
+        
+        sprintf(data_string,"My friend's name is %s, His age is %d",friend_name,age);
+        puts(data_string);
         
     }
     
     else if (x==9){
-        
-    }
-    
-    else if (x==9){
-        
+        strrev_str_function();
+        char my_name[100]="Debasish Ray";
+        printf("The input string is\t:\t%s",my_name);
+        printf("The reversed string is\t:\t%s",strrev(my_name));
     }
     
     else if (x==10){
@@ -165,8 +173,15 @@ void sprintf_str_function(){
     printf("In sprintf string function, the function sends the formatted output to the string blank declared.\n For this, we need to assign blank character array in which the output can be saved as string format whatever the output is.\n ");
 }
 
-  
-           
-           
+void sscanf_str_function(){
+    printf("in sscanf function, it is used to read the formatted input from the buffer/string.\n");
+}
 
+void strrev_str_function(){
+    printf("In strrev string function, it reverses the string in c language.\n This string in basically not present in standard C library and basically a non-standard function.\n");
+}
+
+void strcpy_str_function(){
+    printf("In strcpy string function, it cpoies the second  string into the first string as parameters.\n The original content of the data in first string gets deleted and the data of the second string get saved in the first string\n");
+}
 
