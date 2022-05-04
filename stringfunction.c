@@ -162,7 +162,7 @@ void strcmp_str_function(){
 }
 
 void sprintf_str_function(){
-    printf("In sprintf string function, the function sends the formatted output to the string blank declared.\n For this, we need to saaign blank character array inn which the output can be saved as string format whatever the output is.\n ");
+    printf("In sprintf string function, the function sends the formatted output to the string blank declared.\n For this, we need to assign blank character array in which the output can be saved as string format whatever the output is.\n ");
 }
 
   
