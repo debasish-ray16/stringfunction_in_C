@@ -52,14 +52,39 @@ int main(){
     }
     
     else if (x==5){
+        strlen_str_function();
+        char name[1000]="Debasish Ray";
+        str_length=strlen(name);
+        printf("%d",str_length);
         
     }
     
     else if (x==6){
+        strcat_str_function();
+        char str_1[200]="Hi, My name is:";
+        char str_2[200]="Debasish Ray";
+        strcat(str_1,str_2);
+        puts(str_1);
         
     }
     
     else if (x==7){
+        strcmp_str_function();
+        char a_1[100]="DEBASISH";
+        char a_2[100]="debasish";
+        int comp_length=strcmp(a_1,a_2);
+        
+        if (comp_length==0){
+            printf("Both the strings ASCII value is equal.");
+        }
+        
+        else if (comp_length>0){
+            printf("The first string is greater in ASCII value as compared to the second string and hence returns the +ve value.");
+        }
+        
+        else if (comp_length<0){
+            printf("The second string is greater in ASCII value as compared to the first string and hence returns the -ve value.");
+        }
         
     }
     
@@ -115,16 +140,33 @@ void putchar_str_function(){
 }
 
 void printf_str_function(){
-    printf("printf() function used to take the input from the user according to format specifier specified by user.\n);
+    printf("printf function used to take the input from the user according to format specifier specified by user.\n);
 }
 
 void atoi_str_function(){
-    printf("atoi() function is used to convert the string numbers into integer value.\n")
+    printf("atoi function is used to convert the string numbers into integer value.\n")
     printf("Not the american-code form.\n");
 }
 
 void strlen_str_function(){
-    printf("strlen() function is used to ");
+    printf("strlen function is used to count the number of character including the spaces and whitespaces.\n");
+    printf("It return the integer value, the length of the string.");
 }
+
+void strcat_str_function(){
+    printf("In strcat string function, the second string get append at the first string.\n The two strings gets joined and gets saved into the first string.\n");
+}
+
+void strcmp_str_function(){
+    printf("In strcmp string function,the function takes two string as parameters and returns the integer value.\n It requires to initialize empty variable where it returns the (+ve) value where the first string is greater in ASCII character to the second string.\n(-ve) when the second string is greater in ASCII value as compared to the first string.\n (0) value when the first string ASCII value is equal to the ASCII value of the second string.");
+}
+
+void sprintf_str_function(){
+    printf("In sprintf string function, the function sends the formatted output to the string blank declared.\n For this, we need to saaign blank character array inn which the output can be saved as string format whatever the output is.\n ");
+}
+
+  
+           
+           
 
 
