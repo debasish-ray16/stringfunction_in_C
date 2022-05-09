@@ -158,7 +158,7 @@ void atoi_str_function(){
 
 void strlen_str_function(){
     printf("strlen function is used to count the number of character including the spaces and whitespaces.\n");
-    printf("It return the integer value, the length of the string.");
+    printf("It returns the integer value, the length of the string.");
 }
 
 void strcat_str_function(){
