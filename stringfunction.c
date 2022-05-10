@@ -95,7 +95,7 @@ int main(){
     }
 
     else if (x==8){
-        sprintf_str_function()
+        sprintf_str_function();
         char data_string;
         char friend_name[200]="Parthajeet Sharma";
         int age;
