@@ -59,6 +59,7 @@ int main(){
 
     else if (x==5){
         strlen_str_function();
+        int str_length;
         char na[1000]="Debasish Ray";
         str_length=strlen(na);
         printf("%d",str_length);
