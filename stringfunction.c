@@ -179,7 +179,7 @@ void putchar_str_function(){
 }
 
 void printf_str_function(){
-    printf("printf function used to take the input from the user according to format specifier specified by user.\n);
+    printf("printf function used to take the input from the user according to format specifier specified by user.\n");
 }
 
 void atoi_str_function(){
