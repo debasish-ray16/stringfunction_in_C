@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,7 +23,7 @@ int main(){
     printf("[1]=gets() and puts() usage\n[2]=getchar() and putchar() usage\n[3]=printf() usage\n[4]=atoi() usage\n[5]=strlen() usage\n[6]=strcat() usage\n[7]=strcmp() usage\n[8]=sprintf() usage\n[9]=sscanf() usage\n[10]=strrev() usage \n[11]=strcpy() usage\n[12]=strstr() usage\n[13]=strtok() usage\n");
     printf("Enter the number:");
     scanf("%d",&x);
-    
+
     if (x==1){
         gets_str_function();
         puts_str_function();
@@ -34,7 +32,7 @@ int main(){
         gets(str1);        //gets() usage.
         puts(str1);        //puts() usage.
     }
-    
+
     else if (x==2){
         getchar_str_function();
         putchar_str_function();
@@ -42,52 +40,60 @@ int main(){
         str2=getchar();
         putchar(str2);
     }
-    
+
     else if (x==3){
-        
+        printf_str_function();
+        char statement[1000]="Hi! My name is Debasish Ray. I am currently studying in SRM University, Chennai";
+        printf("%s".statement);
+
     }
-    
+
     else if (x==4){
-        
+        atoi_str_function();
+        char n[20]="45";
+        int num=atoi(n);
+        printf("%s\n",n);     //number have string value.So %s is used.         
+        printf("%d",num);     //num have integer value.So %d is used.
+
     }
-    
+
     else if (x==5){
         strlen_str_function();
-        char name[1000]="Debasish Ray";
-        str_length=strlen(name);
+        char na[1000]="Debasish Ray";
+        str_length=strlen(na);
         printf("%d",str_length);
-        
+
     }
-    
+
     else if (x==6){
         strcat_str_function();
         char str_1[200]="Hi, My name is:";
         char str_2[200]="Debasish Ray";
         strcat(str_1,str_2);
         puts(str_1);
-        
+
     }
-    
+
     else if (x==7){
         strcmp_str_function();
         char a_1[100]="DEBASISH";
         char a_2[100]="debasish";
         int comp_length=strcmp(a_1,a_2);
-        
+
         if (comp_length==0){
             printf("Both the strings ASCII value is equal.");
         }
-        
+
         else if (comp_length>0){
             printf("The first string is greater in ASCII value as compared to the second string and hence returns the +ve value.");
         }
-        
+
         else if (comp_length<0){
             printf("The second string is greater in ASCII value as compared to the first string and hence returns the -ve value.");
         }
-        
+
     }
-    
+
     else if (x==8){
         sprintf_str_function()
         char data_string;
@@ -95,39 +101,63 @@ int main(){
         int age;
         printf("Enter the age of %s:\t",friend_name);
         scanf("%d",&age);
-        
+
         sprintf(data_string,"My friend's name is %s, His age is %d",friend_name,age);
         puts(data_string);
-        
+
     }
-    
+
     else if (x==9){
-        strrev_str_function();
-        char my_name[100]="Debasish Ray";
-        printf("The input string is\t:\t%s",my_name);
-        printf("The reversed string is\t:\t%s",strrev(my_name));
+        sscanf_str_function();
+        char name[30]="Debasish Ray";
+        char car[20];
+        int age;
+        sscanf(name,"%s%d",name,&age);
+        printf("Car: %s\nAge:%d\n",name,age);
     }
-    
+
     else if (x==10){
-        
+        strrev_str_function();
+        char my_name[30]="Debasish Ray";
+        printf("the given user string is: %s",my_name);
+        printf("The input reversed string is: %s",strrev(my_name));
+
     }
-    
+
     else if (x==11){
-        
+        strcpy_str_function();
+        char name11[30]="Vineet Ray";
+        char name22[20]="Debasish Ray";
+        strcpy(name11,name22);
+        printf("%s",name11);
     }
-    
+
     else if (x==12){
-        
+        strstr_str_function();
+        char introduction[1000]="Hello! My name is Debasish Ray. I am a college student of SRM, Chennai, Kattankulathur. Basically , i am currently pursuing my B.Tech degree in Computer Science and Engineering.";
+        char *name;
+        name=strstr(introduction,"Debasish Ray");     // After finding the string, The whole string after the found string will get printed in result.
+        printf("%s",name);
     }
-    
+
     else if (x==13){
-        
-    }
+        strtok_str_function();
+        char tokenization[10000]="The essay comes in many shapes and sizes; it can focus on a personal experience or a purely academic exploration of a topic.  Essays are classified as a subjective writing form because while they include expository elements, they can rely on personal narratives to support the writer’s viewpoint.  The essay genre includes a diverse array of academic writings ranging from literary criticism to meditations on the natural world.  Most typically, the essay exists as a shorter writing form; essays are rarely the length of a novel.  However, several historic examples, such as John Locke’s seminal work “An Essay Concerning Human Understanding” just shows that a well-organized essay can be as long as a novel.";
+        const char symbol[2]=".";
+        char *token;
     
+        token=strtok(tokenization,symbol);    
+    
+        while(token!=NULL){
+            printf("%s\n",token);
+            token=strtok(NULL,symbol);
+        }
+    }
+
     else{
         printf("You have not selected from the given numbers.\nPlease enter the correct number.");
     }
-    
+
     return 0;
 }
 
@@ -184,4 +214,3 @@ void strrev_str_function(){
 void strcpy_str_function(){
     printf("In strcpy string function, it cpoies the second  string into the first string as parameters.\n The original content of the data in first string gets deleted and the data of the second string get saved in the first string\n");
 }
-
